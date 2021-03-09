@@ -12,19 +12,28 @@ class fruit{
 
 
     //constractor
-    public function __constractor($name){
+    public function __constractor($name,$color){
         $this->name=$name;
+        $this->color=$color;
         //this will set the value once the object is created 
 
     }
     public function get_name(){
         //get the name of the fruit 
-        return $this->name;
+        print  $this->name;
+        print  $this->color;
 
     }
+    
     //there is no need to call a fuction to set values to the property
     /**
      * create the object and pass the values 
      * this reduces the number of 
      */
+    //create the instances 
+    
+
 }
+//create the class instances 
+$apple=new fruit("apple","red");
+$apple->get_name();
