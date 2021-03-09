@@ -48,6 +48,14 @@ class User{
      * 
      * we can have methods in the class 
      */
+    public function  __construct(){
+        //this is the constractor 
+        //the function calls itself
+
+        $this->username="leon";
+        $this->email="leon@gmail.com";
+
+    }
     public function addfriend(){
         //methods or behaviour of the class 
         /**
@@ -65,13 +73,28 @@ $user_two=new User();
  * how to access the class properties 
  * $object->method() 
  */
-print $user_one->username;
+print $user_one->username; 
 print $user_one ->email;
 //accessing methods 
 print $user_one->addfriend();
-print_r (get_class_vars('User'));
+#print_r (get_class_vars('User'));
 
-print_r(get_class_methods('user'));
+#print_r(get_class_methods('user'));
+//change the values 
+/**
+ * just specify the object then the property and change the value 
+ * of the property ....this applies for example when users log in to a system
+ * 
+ */
+#$user_two->username="anselmo";
+#$user_two->email="anselmo@gmail.com";
+
+#print $user_two->username; 
+#print $user_two ->email;
+//accessing methods 
+#print $user_two->addfriend();
+
+
 #print get_class($user_one);
 //a new object is created based on the class user 
 //this is called instantiating this class 
@@ -79,4 +102,16 @@ print_r(get_class_methods('user'));
  * the $user_one and two are just instances of the classes 
  * but they belong to  one class called user 
  * 
+ * 
+ * 
+ * when individual objects are created the inherit 
+ * the properties and behavior form a class but 
+ * each object will have diiffrent values for the properties 
+ * 
+ * class car{
+ *      volvo
+ *      audi
+ *      totyota
+ * }
+ * in a 
  */
