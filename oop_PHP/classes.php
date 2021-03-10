@@ -67,8 +67,10 @@ class User{
          * this means this instance of a class 
          */
         
-        return " $this->username add a new friend ";
+        return " $this->username";
+        
     }
+    
 }
 $user_one=new User('mario','mario@g.com');//object created with respect to the class 
 $user_two=new User('logi','logo@g.com');
@@ -76,11 +78,14 @@ $user_two=new User('logi','logo@g.com');
  * how to access the class properties 
  * $object->method() 
  */
-print $user_one->username; 
-print $user_one ->email;
+print $user_one->addfriend(); 
+print $user_one->email;
+
+
 //accessing methods 
-print $user_one->addfriend();
 print $user_two->addfriend();
+print $user_two->email;
+
 #print_r (get_class_vars('User'));
 
 #print_r(get_class_methods('user'));

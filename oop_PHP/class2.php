@@ -47,3 +47,4 @@ $mango ->set_color('yellow');
 
 print $apple->get_name_color();
 print $mango->get_name_color();
+print $apple->name;

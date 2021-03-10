@@ -2,7 +2,7 @@
 class fruit {
     public $name;
     public $color;
-    public function __constructor($name,$color){
+    public function __construct($name,$color){
         //method constractor
         $this->name=$name;
         $this->color=$color;
@@ -17,6 +17,7 @@ class fruit {
     }
     public function __destruct(){
         //destractor 
+        //destroys tthe object
 
     }
 

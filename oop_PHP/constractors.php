@@ -12,7 +12,7 @@ class fruit{
 
 
     //constractor
-    public function __constractor($name,$color){
+    public function __construct($name,$color){
         $this->name=$name;
         $this->color=$color;
         //this will set the value once the object is created 
