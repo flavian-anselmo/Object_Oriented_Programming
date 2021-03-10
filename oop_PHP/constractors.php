@@ -20,9 +20,13 @@ class fruit{
     }
     public function get_name(){
         //get the name of the fruit 
-        print  $this->name;
-        print  $this->color;
+        return $this->name;
+        
 
+    }
+    public function get_color(){
+        //get the color of fruit 
+        return $this->color ;
     }
     
     //there is no need to call a fuction to set values to the property
@@ -30,10 +34,11 @@ class fruit{
      * create the object and pass the values 
      * this reduces the number of 
      */
-    //create the instances 
+     
     
 
 }
 //create the class instances 
 $apple=new fruit("apple","red");
-$apple->get_name();
+print $apple->get_name();
+print $apple->get_color();

@@ -36,8 +36,8 @@
  */
 class User{
     //ALL properties and methods 
-    public $username="flavian";
-    public $email ="flaviananselmo6@gmail.com";
+    public $username;
+    public $email;
     /**
      * we are using public to make 
      * the variables public as the name suggests 
@@ -48,13 +48,16 @@ class User{
      * 
      * we can have methods in the class 
      */
-    public function  __construct(){
+    public function  __construct($username,$email){
         //this is the constractor 
         //the function calls itself
+        /**
+         * 
+         * prevents hard coding values to properties 
+         */
 
-        $this->username="leon";
-        $this->email="leon@gmail.com";
-
+        $this->username=$username;
+        $this->email=$email;
     }
     public function addfriend(){
         //methods or behaviour of the class 
@@ -67,8 +70,8 @@ class User{
         return " $this->username add a new friend ";
     }
 }
-$user_one=new User();//object created with respect to the class 
-$user_two=new User();
+$user_one=new User('mario','mario@g.com');//object created with respect to the class 
+$user_two=new User('logi','logo@g.com');
 /**
  * how to access the class properties 
  * $object->method() 
@@ -77,6 +80,7 @@ print $user_one->username;
 print $user_one ->email;
 //accessing methods 
 print $user_one->addfriend();
+print $user_two->addfriend();
 #print_r (get_class_vars('User'));
 
 #print_r(get_class_methods('user'));
