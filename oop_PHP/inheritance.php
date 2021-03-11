@@ -13,7 +13,7 @@
  */
 class fruit{
     public  $name;
-    private$color;
+    private $color;
 
     //constractor
     public function __construct($name,$color){
