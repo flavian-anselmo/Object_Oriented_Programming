@@ -54,24 +54,26 @@ class cylinder extends area{
     /**
      * this function inherits from the class area 
      * since a cylinnder has a radius and a circle has also 
-     * aradius
+     * a radius
      */
-    private $height;
+    public  $height;
     public function __construct($radius,$height)
     {
-        $this->radius=$radius;
+       
         $this->height=$height;
+        parent::__construct($radius);
         
     }
-    public function get_cylinder(){
-        //get the area of a cylinder
-        return self::PI * (($this ->radius *$this->radius)*($this->height));
+    public function get_volume(){
+        //get the volume of the cylinder
+        return $this->get_area() *$this->height;
     }
+    
 }
 //instance of the class area 
 $circle_one = new area(14);
-$cylinder_one = new cylinder(14,7);
+$cylinder_one = new cylinder(24,7);
 print $circle_one->get_area();
 print "\n";
-print $cylinder_one->get_cylinder();
+print $cylinder_one ->get_volume();
 

@@ -56,9 +56,36 @@ class _user{
         
     }
 }
+class admin extends _user{
+    //inherit user
+    /**
+     * if this class has no constractor 
+     * the values will be set from the 
+     * constractor in user class 
+     */
+    public $level;
+    public function __construct($username,$email,$level){
+        /**this constractor will override the constractor in user
+         * hence the functions that were used to get email and 
+         * name will not display since the computer has detected 
+         * a constractor in the class admin
+        */
+
+        $this->level=$level;
+        //to get the parent class user we call its constractor
+        parent ::__construct($username,$email);//get the prperties of class user
+
+        
+    }
+
+
+
+}
+
 //instances 
 $user_one=new _user('mario','mario@g.com');
 $user_two=new _user('super','super@g.com');
+$admin_user=new admin('yoshi','yoshi@g.com',5);
 
 #echo $user_one->email;
 #echo $user_two->email;
@@ -67,3 +94,7 @@ $user_one->set_email("odongo@gmail.net");//this has enabled as to change the ema
 print $user_one->_get_email();
 print "\n";
 print $user_two->_get_email();
+print "\n";
+print $admin_user->_get_email();//this will not display
+print "\n";
+print $admin_user->level;
