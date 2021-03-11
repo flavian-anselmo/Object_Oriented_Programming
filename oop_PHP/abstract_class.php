@@ -55,3 +55,20 @@ $laptop_one=new laptop("Dell");
 $desktop_one=new desktop ("HP");
 print $laptop_one->__processing("1.2");
 print $desktop_one ->__processing("2.2","optional argument");
+/**
+ * when inheriting from an abstract class 
+ * the chuild class method must be defined 
+ * with the same name 
+ * if the abstract class is defined as protected 
+ * the child class should be defined as protected or 
+ * public but not private 
+ * 
+ * 
+ * rules with abstract classes 
+ * ---->the child class method must be defiend with the same 
+ * name and it redeclares the parent abstract methood 
+ * ----->the child class must be defined with the same or 
+ * a less restricted access modifier 
+ * ----->the number of required elements must be the same 
+ * however the child classs may have optionsl arguments 
+ */
