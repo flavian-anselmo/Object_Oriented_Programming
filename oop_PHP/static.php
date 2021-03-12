@@ -3,7 +3,7 @@
  * static is not accessed with an instance 
  */
 class weather {
-    public  static $tempcondition = array('conditions'=>['cold','mild','warm']);
+    public  static $tempcondition = ['cold','mild','warm'];
     public static function celciusTempCondition($c){
         return $c *9/5+32;
 
@@ -26,9 +26,36 @@ class weather {
 
     }
 }
+class sunny_day extends weather {
+    public $len;
+    public $counter=0;
+    public function sun_condition(){
+        //this is a child class 
+        /**
+         * to call a static property form a child class 
+         * use the parent keyword  in side the child class 
+         * 
+         */
+        //display the array of weather conditons 
+        $this->len=count(parent::$tempcondition);
+        while ($this->counter<$this->len){
+            //get the items
+            print "condition{$this->counter}--->".parent::$tempcondition[$this->counter]."<br>";
+        
+            $this ->counter++;
+
+        }
+        
+     
+
+    }
+
+}
 print_r(weather::$tempcondition);//get the array directly no need of creating an instance of a class 
 //through this we can lso call methods without an instance 
 print weather::celciusTempCondition(30)."C";
 print "\n";
-print weather::determineTempCondition(80);
+print weather::determineTempCondition(80)."<br>";
 print "\n";
+$sun=new sunny_day();
+$sun->sun_condition();
