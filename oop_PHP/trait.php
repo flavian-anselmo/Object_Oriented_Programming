@@ -11,3 +11,19 @@
  * be used in multiple classes and the method can have any 
  * access modifier (public private protected )
  */
+trait Traitname {
+    public function msg(){
+        print "oop is fun ";
+    }
+
+}
+class child_class{
+    //from this we can inherit from parent 
+    use Traitname;
+    //use the use key word 
+    
+
+}
+class child_two{
+    
+}
