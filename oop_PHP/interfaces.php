@@ -10,9 +10,9 @@
  * 
  * 
  * difference btwn interface and abstract classes 
- * --->interface cannot have properties while abstract class can
- * --->interface methods must be public while abstrct can be public or protected 
- * ---->All methods in an  interface are abstract so abstract keyword is not needed 
+ * ----->interface cannot have properties while abstract class can
+ * ----->interface methods must be public while abstrct can be public or protected 
+ * ----->All methods in an  interface are abstract so abstract keyword is not needed 
  * ----->classes can implement an interface while inheriritnng form another class at the same time 
  * 
  */

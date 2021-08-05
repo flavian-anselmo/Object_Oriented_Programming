@@ -49,7 +49,7 @@ class validate_fileds{
             $this->addErr('password','password cannot be empty');
         }else{
             //validate with regex
-            if(!preg_match('/^[a-zA-Z](6,12)$/',$val)){
+            if(!preg_match('/^[a-zA-Z]{6,12}$/',$val)){
                 $this->addErr('passsword',"weakpassword");
 
             }
